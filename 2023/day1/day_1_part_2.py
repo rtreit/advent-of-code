@@ -1,3 +1,6 @@
+import re
+with open("day_1_input.txt") as f:
+    data = f.readlines()
 results = 0
 for line in data:
     positions = {0:[], 1:[], 2:[], 3:[], 4:[], 5:[], 6:[], 7:[], 8:[], 9:[]}
