@@ -1,5 +1,5 @@
 import re
-with open("day_1_input.txt") as f:
+with open("input.txt") as f:
     data = f.readlines()
 results = 0
 for line in data:
