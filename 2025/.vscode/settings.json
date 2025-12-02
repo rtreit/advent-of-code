@@ -1,0 +1,37 @@
+{
+  // ---- Disable VS Code IntelliCode ----
+  "editor.suggest.showWords": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showVariables": true,
+
+  "editor.inlineSuggest.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "editor.suggest.showDeprecated": true,
+
+  // ---- Disable GitHub Copilot ----
+  "github.copilot.enable": {
+    "*": false
+  },
+  "github.copilot.inlineSuggest.enable": false,
+
+  // ---- Disable Pylance / Python language server’s auto-import suggestions ----
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.completeFunctionParens": false,
+  "python.analysis.completion": false,
+
+  // ---- Disable VS Code native IntelliSense ----
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+
+  // Optional: Turn off code actions / hints
+  "editor.codeActionsOnSave": {},
+  "editor.codeLens": false,
+  "editor.inlayHints.enabled": "off"
+}
