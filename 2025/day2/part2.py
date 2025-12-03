@@ -2,7 +2,6 @@ with open("input.txt") as f:
     input: list = f.readline().split(",")
 
 def calculate_ngrams(ngram: int, text: str) -> list:
-    print(text)
     ngrams = []
     for i in range(len(text)):
         gram = text[i:i+ngram]
@@ -15,14 +14,20 @@ def has_repeating_pattern(number: int) -> bool:
     # find all possible ngrams
     ngrams: list = []
     grams = len(str(number)) // 2
-    for j in range(1,grams+1):
-        ngrams.append(j)    
-    print(ngrams)
+    for i in range(1,grams+1):
+        ngrams.append(i)
+    #print(ngrams)
+    for i in range(len(ngrams)):
+        ngrams = calculate_ngrams(int(ngrams[i]), str(number))
+        #print(f"ngrams: {ngrams}")
+        ngram_set = set(ngrams)
+        if len(ngram_set) == 1:
+            print(ngrams)
 
 
     return result
 
-def find_invalid(input: str) -> list:
+def find_invalid(input) -> list:
     input = input.split("-")
     candidates: list = [candidate for candidate in range(int(input[0]), int(input[1]) + 1)]
     invalid_values = [candidate for candidate in candidates if has_repeating_pattern(candidate)]
